@@ -55,7 +55,8 @@
             <version>2.2</version>
         </plugin>
       </plugins>
-	<distributionManagement>
+  </build>
+    <distributionManagement>
     <snapshotRepository>
          <id>nexus</id>
          <url>http://52.173.28.7:8081/repository/maven-snapshots/</url>
@@ -65,6 +66,4 @@
          <url>http://52.173.28.7:8081/repository/maven-releases/</url>
                </repository>
     </distributionManagement>
-
-  </build>
 </project>
