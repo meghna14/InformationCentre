@@ -1,3 +1,1 @@
 # InformationCentre
-
-#Hello
