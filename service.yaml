@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: poc2-expose
+  name: poc2-expose-$BUILD_NUMBER
   labels:
-    name: poc2-deployment
+    name: poc2-deployment-$BUILD_NUMBER
 spec:
   type: NodePort
   ports:
     # the port that this service should serve on
     - port: 8080
-      nodePort: 31850
+      nodePort: 31852
   # label keys and values that must match in order to receive traffic for this service
   selector:
-    name: poc2-deployment
+    name: poc2-deployment-$BUILD_NUMBER
