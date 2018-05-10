@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: poc2-deployment
+spec:
+  selector:
+    matchLabels:
+      name: poc2-deployment
+      replicas: 2 # tells deployment to run 2 pods matching the template
+      template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        name: poc2-deployment
+    spec:
+      containers:
+      - name: poc2-deployment
+        image: meghna14/poc2:9
+        ports:
+        - containerPort: 8080

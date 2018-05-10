@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: poc2-expose
+  labels:
+    name: poc2-deployment
+spec:
+  type: NodePort
+  ports:
+    # the port that this service should serve on
+    - port: 8080
+    - nodePort: 31850
+  # label keys and values that must match in order to receive traffic for this service
+  selector:
+    name: poc2-deployment
